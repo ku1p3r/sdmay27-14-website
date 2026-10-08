@@ -100,149 +100,124 @@
 <!-- /post-nav -->
 
 <main role="main" id="main-content" class="">
-	<div style="width: 90%" class="container">
-<div  style="height: 100vh;" class="row">
-<br>
+<div class="container">
 
-Senior Design Team sample • Sample SD Site
-<h2>Project Overview</h2>
+	<!-- Project Overview -->
+	<section class="sd-section sd-overview" id="overview">
+		<div class="sd-overview-text">
+			<h2>Project Overview</h2>
+			<p>
+				Construction plans are usually shared as 2D floor plans and elevation drawings, which can be hard
+				for homeowners and subcontractors to picture. For our client, Buildertrend, we're building a
+				pipeline that reads those drawings and automatically generates a 3D model of the building that
+				you can rotate and explore in the browser.
+			</p>
+			<dl class="sd-details">
+				<div><dt>Client</dt><dd>Buildertrend</dd></div>
+				<div><dt>Faculty Advisor</dt><dd>Judith Islam</dd></div>
+				<div><dt>Team Meetings</dt><dd>Tuesdays, 4:00 PM, Hoover 2055</dd></div>
+			</dl>
+		</div>
+
+		<figure class="sd-model" aria-label="Animation of a floor plan being turned into a 3D model">
+			<div class="sd-model-bar">
+				<span class="sd-model-file">sample_house.plan</span>
+				<button class="sd-model-replay" type="button" title="Replay" aria-label="Replay animation"><i class="fas fa-redo"></i></button>
+			</div>
+			<div class="sd-model-stage">
+				<canvas id="plan-canvas" aria-hidden="true"></canvas>
+				<span class="sd-model-hint">Drag to rotate</span>
+			</div>
+			<ol class="sd-model-steps" aria-hidden="true">
+				<li>Floor plan</li>
+				<li>Walls</li>
+				<li>Roof</li>
+				<li>3D model</li>
+			</ol>
+		</figure>
+	</section>
+
+	<!-- Team Members -->
+	<section class="sd-section" id="teammembers">
+		<h2>Team Members</h2>
+
+		<div class="sd-team">
+
+			<!-- Member: Nakshatra Gupta -->
+			<div class="sd-member">
+				<img src="blank-profile.png" alt="">
+				<h4>Nakshatra Gupta</h4>
+				<p class="sd-member-role">Communication Lead</p>
+				<p class="sd-member-bio"></p>
+			</div>
+
+			<!-- Member: Rishiraj Parmar -->
+			<div class="sd-member">
+				<img src="blank-profile.png" alt="">
+				<h4>Rishiraj Parmar</h4>
+				<p class="sd-member-role">Organization Lead</p>
+				<p class="sd-member-bio"></p>
+			</div>
+
+			<!-- Member: Ryan McNab -->
+			<div class="sd-member">
+				<img src="img/team/ryan-mcnab.webp" alt="Ryan McNab">
+				<h4>Ryan McNab</h4>
+				<p class="sd-member-role">Team Meetings Lead</p>
+				<p class="sd-member-bio">
+					Ryan runs the team's weekly meetings and built the project's first prototype, which turns a
+					floor plan image into a 3D model you can edit and walk through.
+				</p>
+			</div>
+
+			<!-- Member: Daniel Hargrave -->
+			<div class="sd-member">
+				<img src="blank-profile.png" alt="">
+				<h4>Daniel Hargrave</h4>
+				<p class="sd-member-role">Computer Vision Lead</p>
+				<p class="sd-member-bio"></p>
+			</div>
+
+			<!-- Member: Jase Beaubien -->
+			<div class="sd-member">
+				<img src="blank-profile.png" alt="">
+				<h4>Jase Beaubien</h4>
+				<p class="sd-member-role">Graphics Lead</p>
+				<p class="sd-member-bio"></p>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Weekly Reports: edit the list in js/documents.js -->
+	<section class="sd-section" id="weeklyreports">
+		<h2>Weekly Reports</h2>
+		<div class="sd-docs" data-docs="weeklyReports" data-empty="No weekly reports yet."></div>
+	</section>
+
+	<!-- Design Documents: edit the list in js/documents.js -->
+	<section class="sd-section" id="designdocuments">
+		<h2>Design Documents</h2>
+		<div class="sd-docs" data-docs="designDocuments" data-empty="No design documents yet."></div>
+	</section>
 
 </div>
-<div class="row" >
-	<div class="col-xs-12 col-md-12">
-        <link rel="stylesheet" href="" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
-
-                <div class="row" id="teammembers">
-                    <div class="col-12 text-left">
-                        <div class="section-title">
-                            <h4 class="title">Team Members</h4>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-        
-                <div class="row">
-
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-                    
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-
-                <!-- </div>end member row -->
-
-              
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-                    
-                    <!--Start of Member Profile-->
-                    <div class="col-lg-2 col-md-2 col-sm-3">
-                        <div class="text-center">
-                            <h4 class="title">Member Name</h4>
-                            <small class="text-muted">Member Role</small>
-                            <img src="blank-profile.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-sm-12">
-                            <div>
-                                <p>Member Bio</p>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end col-->
-                    <!--End of Member Profile-->
-
-                </div><!--end row-->
-
-	</div>
-
-    </div>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-        <h2 id="weeklyreports">Weekly Reports</h2>
-            <a href="sample-doc.pdf">Report 1</a><br>
-            <a href="sample-doc.pdf">Report 2</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-        <h2 id="designdocuments">Design Documents</h2>
-        <a href="sample-doc.pdf">Design Doc 1</a><br>
-        <a href="sample-doc.pdf">Design Doc 2</a><br>
-        <br>
-        <br>
-        <br>
-    <br>
-	</div>
 </main>
 <!-- /main -->
+
+<!-- document viewer -->
+<dialog class="sd-viewer" id="doc-viewer" aria-labelledby="sd-viewer-title">
+	<div class="sd-viewer-bar">
+		<div class="sd-viewer-heading">
+			<span class="sd-viewer-title" id="sd-viewer-title"></span>
+			<span class="sd-viewer-sub"></span>
+		</div>
+		<a class="sd-viewer-btn" id="sd-viewer-open" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i><span>Open</span></a>
+		<a class="sd-viewer-btn" id="sd-viewer-download" href="#" download><i class="fas fa-download"></i><span>Download</span></a>
+		<button class="sd-viewer-btn sd-viewer-close" type="button" aria-label="Close"><i class="fas fa-times"></i></button>
+	</div>
+	<div class="sd-viewer-pages" tabindex="0"></div>
+</dialog>
 
 
 
@@ -258,5 +233,8 @@ Senior Design Team sample • Sample SD Site
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/vendor/bootstrap-submenu.min.js"></script>
 	<script src="js/iastate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" integrity="sha512-q+4liFwdPC/bNdhUpZx6aXDx/h77yEQtn4I1slHydcbZK34nLaR3cAeYSJshoxIOq3mjEf7xJE8YWIUHMn+oCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/documents.js"></script>
+	<script src="js/site.js"></script>
 </body>
 </html>
