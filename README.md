@@ -55,6 +55,20 @@ python -m http.server 8000 --bind 127.0.0.1
 
 (Use `python3` on macOS/Linux.) Then open <http://localhost:8000>.
 
+## Deploying to GitHub Pages
+
+The site is plain static files with relative paths, so it can be served straight
+from the repository.
+
+1. Go to <https://github.com/ku1p3r/sdmay27-14-website/settings/pages>.
+2. Under **Build and deployment**, set **Source** to `Deploy from a branch`.
+3. Set **Branch** to `main` and the folder to `/ (root)`, then click **Save**.
+4. Wait a minute for the first build, then open
+   <https://ku1p3r.github.io/sdmay27-14-website/>.
+
+Every push to `main` republishes the site. The empty `.nojekyll` file at the repo
+root tells GitHub to publish the files as-is instead of running them through Jekyll.
+
 ## Editing
 
 - Page content: `index.html`
